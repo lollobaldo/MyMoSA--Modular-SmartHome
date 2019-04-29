@@ -36,7 +36,7 @@ at_exception = []
 
 #setup modules
 def setup():
-	client.subscribe()
+	#client.subscribe()
 	#load channels from modules
 	for module in modules_list:
 		module.setup(client)
