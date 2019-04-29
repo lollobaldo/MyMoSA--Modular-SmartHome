@@ -3,10 +3,10 @@ from time import sleep
 import paho.mqtt.client as mqtt
 
 from utils import my_logger
-#import modules.DHT as DHT
+import modules.DHT as DHT
 import modules.systemStats as SS
 import modules.remoteCommands as RC
-#import modules.lights as LS
+import modules.lights as LS
 
 #read config from file
 config = configparser.RawConfigParser()
@@ -28,7 +28,7 @@ MQTT_PORT     = creds.getint("MAIN","port")
 #						level=logging.INFO)
 
 #list of modules to initialise
-modules_list = [SS, RC]#[DHT, SS, RC, LS]
+modules_list = [DHT, SS, RC, LS]
 
 #placeholders for subscriptions and error-dealing
 subscribed_handlers = {}
