@@ -19,7 +19,7 @@ dht11_sensor = DHT.DHT11
 def probe_DHT():
 	
 	#probe sensor
-	humidity, temperature = int(DHT.read_retry(dht11_sensor, DATA_PIN))
+	humidity, temperature = DHT.read_retry(dht11_sensor, DATA_PIN)
 	#convert float to int - don"t need decimal points
 	humidity = int(humidity)
 	temperature = int(temperature)
